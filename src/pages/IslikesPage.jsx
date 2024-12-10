@@ -1,9 +1,9 @@
-import Header from "../components/Header";
-import { useState, useEffect } from "react";
-import CategorySection from "../components/CategorySection";
+import { useEffect, useState } from "react";
 import useAxios from "../hooks/useAxios";
+import CategorySection from "../components/CategorySection";
+import Header from "../components/Header";
 
-export default function Products() {
+export default function IslikesPage() {
     const [laptopData, setLaptopData] = useState();
     const [cameraData, setCameraData] = useState();
     const [accessoriesData, setAccessoriesData] = useState();
@@ -19,11 +19,11 @@ export default function Products() {
                 const data3 = await getData("accessories");
                 const data4 = await getData("smartphone");
                 const data5 = await getData("gaming");
-                setLaptopData(data1);
-                setCameraData(data2);
-                setAccessoriesData(data3);
-                setSmartPhoneData(data4);
-                setGamingData(data5);
+                setLaptopData(data1.filter(Item=>Item.isLike));
+                setCameraData(data2.filter(Item=>Item.isLike));
+                setAccessoriesData(data3.filter(Item=>Item.isLike));
+                setSmartPhoneData(data4.filter(Item=>Item.isLike));
+                setGamingData(data5.filter(Item=>Item.isLike));
             } catch (error) {
                 console.error("Failed to fetch data:", error.message);
             }

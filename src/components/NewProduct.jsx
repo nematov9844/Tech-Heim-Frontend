@@ -21,7 +21,7 @@ export default function NewProduct() {
   return (
     <div>
       <div className="flex justify-between w-full">
-        <h1>New Products</h1>
+        <h1 className="md:text-3xl font-bold text-gray-900">New Products</h1>
         <Link to={"product"} className="text-blue-600 hover:text-blue-700 font-medium">View all</Link>
       </div>
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:!grid-cols-2 md:!grid-cols-3 lg:!grid-cols-4">

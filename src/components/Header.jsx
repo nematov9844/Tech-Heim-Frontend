@@ -44,9 +44,13 @@ export default function Header() {
       {/* Icons */}
       <div className='flex items-center'>
         <div className='hidden sm:block'>
+          <Link to="isLikes">
           <HeartIcon />
+          </Link>
         </div>
+        <Link to={"/isBuys"}>
         <ShoppingIcon />
+        </Link>
         <UserIcon />
       </div>
 

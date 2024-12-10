@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <div className="flex  flex-row">
         <div className="lg:w-[50%] w-full flex flex-col gap-1 sm:gap-[50px] justify-center items-start">
-            <h1 className="font-semibold sm:text-6xl sm:leading-[70px] text-[#042352]">Tech Heim</h1>
+            <h1 className="font-semibold text-xs nr:text-xl sm:!text-6xl sm:leading-[70px] text-[#042352]">Tech Heim</h1>
             <h4 className="text-[#F45E0C] text-[9px] sm:text-3xl font-medium text-start ">``<span className="text-[#042352]">Join the</span> digital revolution``</h4>
             <button className="bg-[#F45E0C] p-1 text-[9px] text-white sm:py-1 sm:px-3 sm:text-xl rounded-md">Explore More</button>
         </div>
