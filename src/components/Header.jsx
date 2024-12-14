@@ -44,7 +44,7 @@ export default function Header() {
       {/* Icons */}
       <div className='flex items-center'>
         <div className='hidden sm:block'>
-          <Link to="isLikes">
+          <Link to="/isLikes">
           <HeartIcon />
           </Link>
         </div>
@@ -69,7 +69,7 @@ export default function Header() {
         Close
       </button>
       <ul className="flex flex-col gap-4 text-lg font-light">
-        <Link to={"/home"}>Home</Link>
+        <Link to={"/"}>Home</Link>
         <Link to={"/product"}>Product</Link>
         <Link to={"/blog"}>Blog</Link>
         <Link to={"/faq"}>FAQ</Link>

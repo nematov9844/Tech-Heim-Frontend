@@ -8,7 +8,7 @@ import NotFound from "./NonFound";
 
 export default function AllProducts() {
     const { category, id } = useParams(); // URL dan parametrlarni olish
-    const { getData, updateData } = useAxios();
+    const { getData } = useAxios();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -30,15 +30,6 @@ export default function AllProducts() {
         }
         fetchProduct();
     }, []);
-    const updateExample = async (item = {}, id = Number) => {
-        const payload = { ...item, islike: !item.islike, };
-        try {
-            const updatedData = await updateData(`${category}/${id}`, payload);
-            console.log("Updated data:", updatedData);
-        } catch (error) {
-            console.error("Error updating data:", error.message);
-        }
-    };
     if (loading) {
         return (
             <div className="flex justify-center items-center min-h-screen">
